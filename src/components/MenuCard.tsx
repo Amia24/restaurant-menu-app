@@ -1,6 +1,11 @@
 import React from 'react'
-import menuCard from './menuCard.css'
-const MenuCard = ({menuData}) => {
+import './menuCard.css'
+import { MenuItem } from '../types/menuItem'
+
+interface MenuCardProps {
+    menuData: MenuItem[];
+}
+const MenuCard = ({menuData}: MenuCardProps) => {
     return (
         <div className='cards'>
          {
