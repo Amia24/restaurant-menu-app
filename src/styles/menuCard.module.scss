@@ -1,6 +1,6 @@
 body {
     padding:3%;
-    background-color:rgb(250, 236, 248);
+    background-color: #fff;
 }
 h3 {
     text-align: center;
@@ -20,18 +20,18 @@ h3 {
     border-radius: 20px;
     box-shadow: 10px 10px 25px #a2bebd,-15px -15px 30px #97f7f7;
 }
-.header-div {
+.headerDiv {
     /* height:15%; */
     border-bottom: 2px solid rgb(156, 121, 168) ;
 }
-.card-header {
+.cardHeader {
     margin:5%;
     padding:1%;
     border: 2px solid grey;
     width:6%;
     border-radius: 20px;
 }
-.card-body p {
+.cardBody p {
     text-align: justify;
     display: -webkit-box;
     line-clamp: 3;
@@ -62,7 +62,7 @@ h3 {
     display:block;
     text-align: cover;
 }
-.btn-grp {
+.btnGrp {
     display:flex;
     justify-content: center;
 }

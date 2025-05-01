@@ -1,5 +1,5 @@
 import React from 'react'
-import { MenuItem } from '../types/menuItem'
+import styles from '../styles/menuCard.module.scss';
 
 interface NavbarProps {
   filterItem: (cur: string) => void;
@@ -10,11 +10,11 @@ const Navbar = ({ filterItem, menuList }: NavbarProps) => {
   return (
     <>
       <nav>
-        <div className='btn-grp'>
+        <div className={styles.btnGrp}>
           {
             menuList.map((cur) => {
               return (
-                <button className='btn' onClick={() => filterItem(cur)}>
+                <button className={styles.btn} onClick={() => filterItem(cur)}>
                   {cur}
                 </button>
               )
