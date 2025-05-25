@@ -1,23 +1,22 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import MenuCard from './MenuCard'
 import Navbar from './Navbar'
 import Menu from './MenuApi'
 
-const uniqueList =[
-...new Set(
-    Menu.map((cur) =>{
-    return cur.category;
-})),
-"All"
+const uniqueList = [
+    ...new Set(
+        Menu.map((cur) => {
+            return cur.category;
+        })),
+    "All"
 ];
 
 
 const Restaurant = () => {
-    const [menuData,setMenuData] = useState(Menu);
-    const [menuList,setMenuList] = useState(uniqueList);
+    const [menuData, setMenuData] = useState(Menu);
+    const [menuList, setMenuList] = useState(uniqueList);
     const filterItem = (category: string) => {
-        if(category==="All")
-        {
+        if (category === "All") {
             setMenuData(Menu);
             return;
         }
@@ -28,8 +27,8 @@ const Restaurant = () => {
     };
     return (
         <>
-            <Navbar filterItem={filterItem} menuList={menuList}/>
-            <MenuCard menuData={menuData}/>
+            <Navbar filterItem={filterItem} menuList={menuList} />
+            <MenuCard menuData={menuData} />
         </>
     )
 }
